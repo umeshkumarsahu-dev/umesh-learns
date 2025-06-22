@@ -49,25 +49,5 @@
     <p>Back to <a href="../index.html">Home</a></p>
   </footer>
 </body>
-<script>
-  const htmlTag = document.documentElement;
-  const toggleBtn = document.getElementById("theme-toggle");
-
-  // Load saved theme on page load
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    htmlTag.setAttribute("data-theme", savedTheme);
-    toggleBtn.textContent = savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
-  }
-
-  // Toggle and save theme
-  toggleBtn.addEventListener("click", () => {
-    const current = htmlTag.getAttribute("data-theme");
-    const newTheme = current === "light" ? "dark" : "light";
-    htmlTag.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    toggleBtn.textContent = newTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
-  });
-</script>
-
+<script src="../script.js"></script> <!-- Go up one folder -->
 </html>
