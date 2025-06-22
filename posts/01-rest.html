@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>What is REST API? - Umesh Learns</title>
@@ -7,47 +7,41 @@
 </head>
 <body>
   <header>
-    <h1>🧠 What is REST API?</h1>
-    <p><em>Date: 22 June 2025</em></p>
+    <h1>📘 REST API</h1>
+    <p><em>22 June 2025</em></p>
+    <button id="theme-toggle">🌙 Dark Mode</button>
   </header>
 
   <main>
-    <h2>📌 REST Meaning</h2>
-    <p><strong>REST</strong> stands for <strong>Representational State Transfer</strong>. It is an architecture style for designing networked applications.</p>
-
-    <h2>💡 REST API (Application Programming Interface)</h2>
-    <p>REST APIs use HTTP methods to perform actions on resources, like:</p>
+    <h2>📌 What is REST?</h2>
+    <p>REST stands for <strong>Representational State Transfer</strong>. It is a style of architecture for designing networked applications using HTTP.</p>
+    <h3>Common REST Methods:</h3>
     <ul>
-      <li><strong>GET</strong> – Retrieve data</li>
-      <li><strong>POST</strong> – Create new data</li>
-      <li><strong>PUT</strong> – Update existing data</li>
-      <li><strong>DELETE</strong> – Remove data</li>
+      <li>GET → Retrieve Data</li>
+      <li>POST → Send Data</li>
+      <li>PUT → Update Data</li>
+      <li>DELETE → Delete Data</li>
     </ul>
-
-    <h2>🔗 Example:</h2>
-    <p>For a REST API for "users", these could be the routes:</p>
-    <ul>
-      <li>GET `/users` → List all users</li>
-      <li>POST `/users` → Add new user</li>
-      <li>PUT `/users/1` → Update user with ID 1</li>
-      <li>DELETE `/users/1` → Delete user with ID 1</li>
-    </ul>
-
-    <h2>✅ Key Characteristics of REST APIs:</h2>
+    <h3>🌐 Example:</h3>
+    <pre>
+GET     /users          → get all users
+POST    /users          → create new user
+PUT     /users/1        → update user 1
+DELETE  /users/1        → delete user 1
+    </pre>
+    <h3>✅ REST Principles:</h3>
     <ul>
       <li>Stateless</li>
-      <li>Uses standard HTTP methods</li>
-      <li>Resource-based (URI)</li>
-      <li>Supports multiple formats (usually JSON)</li>
+      <li>Client-Server Separation</li>
+      <li>Cacheable</li>
+      <li>Uniform Interface</li>
     </ul>
-
-    <h2>🧠 Summary</h2>
-    <p>REST is simple, scalable, and widely used in modern web applications and backend systems.</p>
   </main>
 
   <footer>
-    <p>Back to <a href="../index.html">Home</a></p>
+    <p><a href="../index.html">← Back to Home</a></p>
   </footer>
+
+  <script src="../script.js"></script>
 </body>
-<script src="../script.js"></script> <!-- Go up one folder -->
 </html>
