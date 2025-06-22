@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,13 +12,33 @@
   <header>
     <h1>Umesh Learns</h1>
     <p>My daily notes and coding learnings 📘</p>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="theme-toggle">🌙 Dark Mode</button>
   </header>
+
   <main>
     <ul>
       <li><a href="posts/01-rest.html">What is REST API?</a></li>
     </ul>
   </main>
+
   <footer>© 2025 Umesh Kumar Sahu</footer>
+
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const htmlTag = document.documentElement;
+
+    toggleBtn.addEventListener("click", () => {
+      if (htmlTag.getAttribute("data-theme") === "light") {
+        htmlTag.setAttribute("data-theme", "dark");
+        toggleBtn.textContent = "☀️ Light Mode";
+      } else {
+        htmlTag.setAttribute("data-theme", "light");
+        toggleBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
 </body>
 
 </html>

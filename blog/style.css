@@ -1,0 +1,50 @@
+/* Default (Light Mode) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007bff;
+  --button-bg: #f0f0f0;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --link-color: #66b2ff;
+  --button-bg: #1f1f1f;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+header, footer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#theme-toggle {
+  margin-top: 1rem;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: var(--button-bg);
+  color: var(--text-color);
+  border: 1px solid #888;
+  border-radius: 6px;
+  cursor: pointer;
+}
