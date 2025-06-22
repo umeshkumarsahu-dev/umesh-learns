@@ -26,19 +26,26 @@
   <footer>© 2025 Umesh Kumar Sahu</footer>
 
   <script>
-    const toggleBtn = document.getElementById("theme-toggle");
-    const htmlTag = document.documentElement;
+  const htmlTag = document.documentElement;
+  const toggleBtn = document.getElementById("theme-toggle");
 
-    toggleBtn.addEventListener("click", () => {
-      if (htmlTag.getAttribute("data-theme") === "light") {
-        htmlTag.setAttribute("data-theme", "dark");
-        toggleBtn.textContent = "☀️ Light Mode";
-      } else {
-        htmlTag.setAttribute("data-theme", "light");
-        toggleBtn.textContent = "🌙 Dark Mode";
-      }
-    });
-  </script>
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    htmlTag.setAttribute("data-theme", savedTheme);
+    toggleBtn.textContent = savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+  }
+
+  // Toggle and save theme
+  toggleBtn.addEventListener("click", () => {
+    const current = htmlTag.getAttribute("data-theme");
+    const newTheme = current === "light" ? "dark" : "light";
+    htmlTag.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    toggleBtn.textContent = newTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
+</script>
+
 </body>
 
 </html>
